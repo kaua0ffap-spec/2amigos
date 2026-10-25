@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#1B3B2B" />
+<meta name="description" content="Clínica Veterinária 2 Amigos — atendimento humanizado para cães e gatos em Jundiaí e Várzea Paulista. Consultas, vacinas, exames, cirurgias e urgência. Agende pelo WhatsApp." />
+<title>Clínica Veterinária 2 Amigos | Jundiaí e Várzea Paulista</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231B3B2B'/%3E%3Cg fill='%23F3EFE6'%3E%3Cellipse cx='20' cy='22' rx='5.5' ry='7.5' transform='rotate(-18 20 22)'/%3E%3Cellipse cx='44' cy='22' rx='5.5' ry='7.5' transform='rotate(18 44 22)'/%3E%3Cellipse cx='11.5' cy='34' rx='4.8' ry='6.5' transform='rotate(-32 11.5 34)'/%3E%3Cellipse cx='52.5' cy='34' rx='4.8' ry='6.5' transform='rotate(32 52.5 34)'/%3E%3Cpath d='M32 36c7 0 13 5.4 13 11.4 0 3.8-3 6.6-6.8 6.6-2.3 0-4.3-1.2-6.2-1.2s-3.9 1.2-6.2 1.2C22 54 19 51.2 19 47.4 19 41.4 25 36 32 36z'/%3E%3C/g%3E%3Ccircle cx='32' cy='45' r='3.5' fill='%23D96B43'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        serif: ['Fraunces', 'Georgia', 'serif'],
+      },
+      colors: {
+        forest: { 50:'#F2F7F4', 100:'#E1EDE6', 500:'#3D7055', 800:'#1B3B2B', 900:'#122A1E', 950:'#0A1811' },
+        terracotta: { 300:'#EFAE93', 400:'#E2835E', 500:'#D96B43', 600:'#C25832' },
+        'sage-light': '#EAF0EC',
+        muted: '#526056',
+      },
+      animation: { marquee: 'marquee 36s linear infinite' },
+      keyframes: { marquee: { from: { transform:'translateX(0)' }, to: { transform:'translateX(-50%)' } } },
+    }
+  }
+}
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }
+  .font-serif-display { font-family: 'Fraunces', Georgia, serif; }
+  ::selection { background: #D96B43; color: #F9F8F3; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .line-mask { display: block; overflow: hidden; padding-bottom: 4px; }
+  .line-mask > span { display: block; transform: translateY(112%); animation: lineUp .9s cubic-bezier(.22,1,.36,1) forwards; }
+  .line-mask:nth-child(2) > span { animation-delay: .13s; }
+  .line-mask:nth-child(3) > span { animation-delay: .26s; }
+  @keyframes lineUp { to { transform: translateY(0); } }
+  .fade-in { opacity: 0; animation: fadeIn .8s cubic-bezier(.22,1,.36,1) forwards; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee, .line-mask > span, .fade-in { animation: none !important; transform: none !important; opacity: 1 !important; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body class="bg-[#F9F8F3] text-[#1C241F] antialiased overflow-x-clip">
+
+<!-- ============ HEADER ============ -->
+<header id="header" class="fixed inset-x-0 top-0 z-50 border-b border-forest-900/10 bg-[#F9F8F3]/85 backdrop-blur-md">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:h-20 sm:px-6">
+    <a href="#topo" class="flex items-center gap-3">
+      <svg viewBox="0 0 64 64" class="h-9 w-9 sm:h-10 sm:w-10" aria-hidden="true">
+        <rect width="64" height="64" rx="16" fill="#1B3B2B"/>
+        <g fill="#F3EFE6">
+          <ellipse cx="20" cy="22" rx="5.5" ry="7.5" transform="rotate(-18 20 22)"/>
+          <ellipse cx="44" cy="22" rx="5.5" ry="7.5" transform="rotate(18 44 22)"/>
+          <ellipse cx="11.5" cy="34" rx="4.8" ry="6.5" transform="rotate(-32 11.5 34)"/>
+          <ellipse cx="52.5" cy="34" rx="4.8" ry="6.5" transform="rotate(32 52.5 34)"/>
+          <path d="M32 36c7 0 13 5.4 13 11.4 0 3.8-3 6.6-6.8 6.6-2.3 0-4.3-1.2-6.2-1.2s-3.9 1.2-6.2 1.2C22 54 19 51.2 19 47.4 19 41.4 25 36 32 36z"/>
+        </g>
+        <circle cx="32" cy="45" r="3.5" fill="#D96B43"/>
+      </svg>
+      <span class="leading-none">
+        <span class="font-serif-display block text-lg font-bold text-forest-900 sm:text-xl">2 Amigos</span>
+        <span class="block text-[10px] font-semibold uppercase tracking-[0.22em] text-terracotta-500">Clínica Veterinária</span>
+      </span>
+    </a>
+    <nav class="hidden items-center gap-7 lg:flex" aria-label="Navegação principal">
+      <a href="#sobre" class="text-sm font-semibold text-forest-900/80 transition-colors hover:text-terracotta-500">Sobre</a>
+      <a href="#servicos" class="text-sm font-semibold text-forest-900/80 transition-colors hover:text-terracotta-500">Serviços</a>
+      <a href="#diferenciais" class="text-sm font-semibold text-forest-900/80 transition-colors hover:text-terracotta-500">Diferenciais</a>
+      <a href="#localizacao" class="text-sm font-semibold text-forest-900/80 transition-colors hover:text-terracotta-500">Localização</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="https://wa.me/5511998959494?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Veterin%C3%A1ria%202%20Amigos." target="_blank" rel="noopener noreferrer" class="hidden items-center gap-2 rounded-full bg-forest-800 px-5 py-2.5 text-sm font-bold text-[#F9F8F3] shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest-900 hover:shadow-lg sm:inline-flex">
+        <i data-lucide="message-circle" class="h-4 w-4"></i> Agendar Consulta
+      </a>
+      <button id="menu-btn" aria-label="Abrir menu" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-forest-900/15 text-forest-900 lg:hidden">
+        <i data-lucide="menu" class="h-5 w-5"></i>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="hidden border-t border-forest-900/10 bg-[#F9F8F3] lg:hidden">
+    <div class="flex flex-col gap-1 px-4 py-4">
+      <a href="#sobre" class="menu-link rounded-xl px-4 py-3 text-base font-semibold text-forest-900 hover:bg-forest-100">Sobre</a>
+      <a href="#servicos" class="menu-link rounded-xl px-4 py-3 text-base font-semibold text-forest-900 hover:bg-forest-100">Serviços</a>
+      <a href="#diferenciais" class="menu-link rounded-xl px-4 py-3 text-base font-semibold text-forest-900 hover:bg-forest-100">Diferenciais</a>
+      <a href="#localizacao" class="menu-link rounded-xl px-4 py-3 text-base font-semibold text-forest-900 hover:bg-forest-100">Localização</a>
+      <a href="https://wa.me/5511998959494?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Veterin%C3%A1ria%202%20Amigos." target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-forest-800 px-5 py-3.5 text-sm font-bold text-[#F9F8F3]">
+        <i data-lucide="message-circle" class="h-4 w-4"></i> Agendar Consulta
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section id="topo" class="relative overflow-hidden pt-28 sm:pt-36">
+  <div aria-hidden="true" class="pointer-events-none absolute -top-24 right-[-12%] h-[34rem] w-[34rem] rounded-full bg-sage-light/80 blur-3xl"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute bottom-[-20%] left-[-10%] h-[28rem] w-[28rem] rounded-full bg-[#F3EFE6] blur-3xl"></div>
+  <div class="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-4 pb-20 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-28">
+    <div>
+      <div class="fade-in mb-6 inline-flex items-center gap-2 rounded-full border border-forest-900/15 bg-white/60 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-forest-800" style="animation-delay:.1s">
+        <i data-lucide="map-pin" class="h-3.5 w-3.5 text-terracotta-500"></i> Jundiaí &amp; Várzea Paulista
+      </div>
+      <h1 class="font-serif-display text-4xl font-extrabold leading-[1.08] tracking-tight text-forest-950 sm:text-5xl lg:text-6xl">
+        <span class="line-mask"><span>O cuidado que o</span></span>
+        <span class="line-mask"><span><em class="text-terracotta-500">melhor amigo</em> da</span></span>
+        <span class="line-mask"><span>sua família merece.</span></span>
+      </h1>
+      <p class="fade-in mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg" style="animation-delay:.5s">
+        Atendimento veterinário humanizado na Vila Garcia, em Jundiaí — a poucos minutos de Várzea Paulista. Consultas, vacinas, exames e cirurgias com a segurança que o seu pet precisa e o carinho que você procura.
+      </p>
+      <div class="fade-in mt-8 flex flex-wrap items-center gap-4" style="animation-delay:.65s">
+        <a href="https://wa.me/5511998959494?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Veterin%C3%A1ria%202%20Amigos." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 rounded-full bg-[#25D366] px-7 py-4 text-base font-bold text-[#0A1811] shadow-lg shadow-[#25D366]/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20ba5a] hover:shadow-xl active:scale-[0.98]">
+          <i data-lucide="message-circle" class="h-5 w-5"></i> Agendar pelo WhatsApp
+        </a>
+        <a href="tel:+5511998959494" class="inline-flex items-center gap-2 rounded-full border border-forest-900/20 px-6 py-4 text-base font-semibold text-forest-900 transition-colors duration-300 hover:border-forest-900/40 hover:bg-white/70">
+          <i data-lucide="phone" class="h-5 w-5"></i> (11) 99895-9494
+        </a>
+      </div>
+      <div class="fade-in mt-8 flex items-center gap-2 text-sm font-medium text-muted" style="animation-delay:.8s">
+        <i data-lucide="clock" class="h-4 w-4 text-terracotta-500"></i> Seg a sex 09h–21h &nbsp;•&nbsp; Sáb 09h–18h
+      </div>
+    </div>
+    <div class="relative">
+      <div class="fade-in relative mx-auto w-full max-w-md" style="animation-delay:.35s">
+        <div class="overflow-hidden rounded-t-[999px] rounded-b-[2.5rem] border-[6px] border-white shadow-2xl shadow-forest-900/20">
+          <img src="https://images.pexels.com/photos/33394292/pexels-photo-33394292.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Veterinária examinando um gato com carinho na Clínica 2 Amigos" class="aspect-[4/5] w-full object-cover" />
+        </div>
+        <div class="fade-in absolute -bottom-8 -left-4 sm:-left-12" style="animation-delay:.8s">
+          <div class="w-36 overflow-hidden rounded-3xl border-4 border-white shadow-xl shadow-forest-900/15 sm:w-44">
+            <img src="https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGRvZyUyMGNhdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc5Mjc4NzIyOXww&ixlib=rb-4.1.0&q=85" alt="Cão e gato juntos, símbolo da amizade entre pets" class="aspect-square w-full object-cover" />
+          </div>
+        </div>
+        <div class="fade-in absolute -right-3 top-10 rounded-2xl border border-forest-900/10 bg-white/90 px-5 py-4 shadow-xl shadow-forest-900/10 backdrop-blur-md sm:-right-8" style="animation-delay:.95s">
+          <p class="font-serif-display text-2xl font-extrabold text-forest-900">2</p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-muted">amigos cuidando<br/>do seu melhor amigo</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="overflow-hidden border-y border-forest-800 bg-forest-900 py-4" aria-hidden="true">
+  <div class="animate-marquee flex w-max items-center gap-8 pr-8" id="marquee-track"></div>
+</div>
+
+<!-- ============ SOBRE ============ -->
+<section id="sobre" class="relative py-20 sm:py-28">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
+    <div class="relative order-2 lg:order-1">
+      <div class="reveal overflow-hidden rounded-[2.5rem] shadow-2xl shadow-forest-900/15">
+        <img src="https://images.unsplash.com/photo-1770836037793-95bdbf190f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwzfHx2ZXRlcmluYXJpYW4lMjBleGFtaW5pbmclMjBkb2d8ZW58MHx8fHwxNzkyNzg3MjI5fDA&ixlib=rb-4.1.0&q=85" alt="Veterinário examinando um cachorro com atenção" class="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105" />
+      </div>
+      <div class="reveal absolute -bottom-10 -right-2 w-44 sm:-right-8 sm:w-56" style="transition-delay:.2s">
+        <div class="overflow-hidden rounded-[2rem] border-4 border-white shadow-xl shadow-forest-900/15">
+          <img src="https://images.pexels.com/photos/7470634/pexels-photo-7470634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Cão recebendo cuidado veterinário em ambiente interno" class="aspect-[3/4] w-full object-cover" />
+        </div>
+      </div>
+    </div>
+    <div class="order-1 lg:order-2">
+      <div class="reveal">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-terracotta-500">Sobre nós</p>
+        <h2 class="font-serif-display text-3xl font-extrabold tracking-tight text-forest-950 sm:text-4xl">Duas paixões que viraram uma missão: cuidar de quem você ama</h2>
+      </div>
+      <div class="reveal" style="transition-delay:.12s">
+        <p class="mt-6 text-base leading-relaxed text-muted">A <strong class="text-forest-900">Clínica Veterinária 2 Amigos</strong> nasceu da amizade entre dois profissionais que compartilham o mesmo propósito: oferecer medicina veterinária de excelência sem abrir mão do afeto. Aqui, tutor e pet são acolhidos como parte da família.</p>
+        <p class="mt-4 text-base leading-relaxed text-muted">Atendemos Jundiaí, Várzea Paulista e toda a região com estrutura moderna, equipe apaixonada e um jeito próximo de cuidar — porque para nós, seu pet não é um paciente. É um amigo.</p>
+      </div>
+      <div class="mt-8 space-y-5">
+        <div class="reveal flex items-start gap-4" style="transition-delay:.15s">
+          <span class="mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-forest-100 text-forest-800"><i data-lucide="heart-handshake" class="h-5 w-5"></i></span>
+          <div><h3 class="text-base font-bold text-forest-950">Atendimento humanizado</h3><p class="mt-1 text-sm leading-relaxed text-muted">Cada pet é recebido pelo nome, com tempo, calma e respeito ao seu ritmo.</p></div>
+        </div>
+        <div class="reveal flex items-start gap-4" style="transition-delay:.25s">
+          <span class="mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-forest-100 text-forest-800"><i data-lucide="shield-check" class="h-5 w-5"></i></span>
+          <div><h3 class="text-base font-bold text-forest-950">Segurança em primeiro lugar</h3><p class="mt-1 text-sm leading-relaxed text-muted">Protocolos rigorosos de higiene, anestesia monitorada e diagnóstico preciso.</p></div>
+        </div>
+        <div class="reveal flex items-start gap-4" style="transition-delay:.35s">
+          <span class="mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-forest-100 text-forest-800"><i data-lucide="sparkles" class="h-5 w-5"></i></span>
+          <div><h3 class="text-base font-bold text-forest-950">Ambiente pensado para pets</h3><p class="mt-1 text-sm leading-relaxed text-muted">Espaços acolhedores que reduzem o estresse de cães e gatos durante a visita.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section id="servicos" class="bg-[#F3EFE6]/70 py-20 sm:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="reveal max-w-2xl">
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-terracotta-500">Nossos serviços</p>
+      <h2 class="font-serif-display text-3xl font-extrabold tracking-tight text-forest-950 sm:text-4xl">Tudo o que o seu pet precisa, em um só lugar</h2>
+      <p class="mt-4 text-base leading-relaxed text-muted">Do check-up de rotina aos momentos que pedem pressa, você conta com uma equipe preparada e uma estrutura completa na Vila Garcia.</p>
+    </div>
+    <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-6" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS (BENTO) ============ -->
+<section id="diferenciais" class="py-20 sm:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-terracotta-500">Por que a 2 Amigos</p>
+      <h2 class="font-serif-display text-3xl font-extrabold tracking-tight text-forest-950 sm:text-4xl">Diferenciais que você sente na primeira visita</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
+      <div class="reveal lg:col-span-2 lg:row-span-2">
+        <article class="group relative h-full min-h-[22rem] overflow-hidden rounded-3xl lg:min-h-full">
+          <img src="https://images.pexels.com/photos/7468978/pexels-photo-7468978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Veterinário segurando um cachorro com cuidado" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-forest-950/90 via-forest-950/30 to-transparent"></div>
+          <div class="absolute bottom-0 p-7">
+            <h3 class="font-serif-display text-2xl font-bold text-white">Equipe apaixonada por pets</h3>
+            <p class="mt-2 max-w-md text-sm leading-relaxed text-[#F3EFE6]/85">Profissionais que escolheram a veterinária por amor — e tratam cada paciente como se fosse o seu próprio pet.</p>
+          </div>
+        </article>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <article class="flex h-full flex-col justify-between rounded-3xl border border-forest-900/10 bg-sage-light p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <div class="flex gap-3">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-forest-800 text-[#F3EFE6]"><i data-lucide="cat" class="h-5 w-5"></i></span>
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-terracotta-500 text-white"><i data-lucide="dog" class="h-5 w-5"></i></span>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-lg font-bold text-forest-950">Espaços cat &amp; dog friendly</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Ambientes pensados para reduzir o estresse de gatos e cães, do jeito que cada um precisa.</p>
+          </div>
+        </article>
+      </div>
+      <div class="reveal" style="transition-delay:.18s">
+        <article class="flex h-full flex-col justify-between rounded-3xl border border-forest-900/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-forest-100 text-forest-800"><i data-lucide="messages-square" class="h-5 w-5"></i></span>
+          <div class="mt-6">
+            <h3 class="text-lg font-bold text-forest-950">Transparência com o tutor</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Diagnósticos explicados em linguagem simples, orçamentos claros e você presente em cada decisão.</p>
+          </div>
+        </article>
+      </div>
+      <div class="reveal lg:col-span-2" style="transition-delay:.26s">
+        <article class="group relative h-full min-h-[16rem] overflow-hidden rounded-3xl">
+          <img src="https://images.pexels.com/photos/37891868/pexels-photo-37891868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Cão e gato relaxando entre margaridas" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-950/50 to-transparent"></div>
+          <div class="relative flex h-full max-w-sm flex-col justify-between p-7">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 text-white backdrop-blur-sm"><i data-lucide="sparkles" class="h-5 w-5"></i></span>
+            <div class="mt-6">
+              <h3 class="font-serif-display text-xl font-bold text-white">Estrutura moderna e higienizada</h3>
+              <p class="mt-2 text-sm leading-relaxed text-[#F3EFE6]/85">Instalações cuidadas nos mínimos detalhes para garantir segurança e conforto em cada atendimento.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULADORA PET ============ -->
+<section class="bg-forest-900 py-20 sm:py-28">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
+    <div class="reveal">
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-terracotta-400">Interativo</p>
+      <h2 class="font-serif-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Qual o plano de cuidado ideal para o seu pet?</h2>
+      <p class="mt-4 max-w-md text-base leading-relaxed text-[#F3EFE6]/70">Conte a idade do seu amigo e descubra, em segundos, a rotina de cuidados que recomendamos. Depois, é só agendar pelo WhatsApp.</p>
+    </div>
+    <div class="reveal" style="transition-delay:.15s">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-sm sm:p-9">
+        <p class="text-sm font-bold text-[#F3EFE6]">Seu pet é um:</p>
+        <div class="mt-3 grid grid-cols-2 gap-3">
+          <button type="button" id="btn-cao" class="flex items-center justify-center gap-2 rounded-2xl border border-terracotta-400 bg-terracotta-500 px-4 py-3.5 text-sm font-bold text-white transition-all duration-300"><i data-lucide="dog" class="h-5 w-5"></i> Cão</button>
+          <button type="button" id="btn-gato" class="flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 text-sm font-bold text-[#F3EFE6]/70 transition-all duration-300 hover:border-white/30"><i data-lucide="cat" class="h-5 w-5"></i> Gato</button>
+        </div>
+        <label for="calc-idade" class="mt-6 block text-sm font-bold text-[#F3EFE6]">Idade (em anos):</label>
+        <input id="calc-idade" type="number" min="0" max="30" step="0.5" placeholder="Ex.: 3" class="mt-3 w-full rounded-2xl border border-white/15 bg-white/10 px-5 py-3.5 text-base font-semibold text-white placeholder:text-white/30 focus:border-terracotta-400 focus:outline-none" />
+        <button type="button" id="calc-btn" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-terracotta-500 px-6 py-4 text-base font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-terracotta-600 active:scale-[0.98]">
+          <i data-lucide="calculator" class="h-5 w-5"></i> Descobrir plano de cuidado
+        </button>
+        <div id="calc-result" class="hidden overflow-hidden">
+          <div class="mt-6 rounded-2xl border border-terracotta-400/30 bg-forest-950/60 p-6">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-terracotta-400" id="calc-fase"></p>
+            <ul class="mt-3 space-y-2 text-sm leading-relaxed text-[#F3EFE6]/85" id="calc-lista"></ul>
+            <a href="https://wa.me/5511998959494?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Veterin%C3%A1ria%202%20Amigos." target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#25D366] transition-colors hover:text-[#4be07f]">
+              <i data-lucide="message-circle" class="h-4 w-4"></i> Agendar avaliação no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCALIZAÇÃO ============ -->
+<section id="localizacao" class="py-20 sm:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="reveal max-w-2xl">
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-terracotta-500">Localização e contato</p>
+      <h2 class="font-serif-display text-3xl font-extrabold tracking-tight text-forest-950 sm:text-4xl">Perto de você, na divisa entre Jundiaí e Várzea Paulista</h2>
+      <p class="mt-4 text-base leading-relaxed text-muted">Estamos na Vila Garcia, com acesso fácil para quem vem de Jundiaí, Várzea Paulista e região. Estacione, entre e seja recebido com um sorriso — e um petisco para o seu pet.</p>
+    </div>
+    <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div class="flex flex-col gap-5">
+        <div class="reveal rounded-3xl border border-forest-900/10 bg-white p-7">
+          <div class="flex items-start gap-4">
+            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-terracotta-500/10 text-terracotta-500"><i data-lucide="map-pin" class="h-5 w-5"></i></span>
+            <div>
+              <h3 class="text-base font-bold text-forest-950">Endereço</h3>
+              <p class="mt-1 text-sm leading-relaxed text-muted">Rua Cica, 989 - Vila Garcia<br/>Jundiaí - SP, 13206-475</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Rua+Cica+989+Vila+Garcia+Jundia%C3%AD+SP" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-forest-800 transition-colors hover:text-terracotta-500">
+                <i data-lucide="navigation" class="h-4 w-4"></i> Traçar rota no Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="reveal rounded-3xl border border-forest-900/10 bg-white p-7" style="transition-delay:.1s">
+          <div class="flex items-start gap-4">
+            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#25D366]/10 text-[#1da851]"><i data-lucide="phone" class="h-5 w-5"></i></span>
+            <div class="flex-1">
+              <h3 class="text-base font-bold text-forest-950">Telefone e WhatsApp</h3>
+              <a href="tel:+5511998959494" class="mt-1 block text-sm font-semibold text-forest-800 transition-colors hover:text-terracotta-500">(11) 99895-9494</a>
+              <a href="https://wa.me/5511998959494?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Veterin%C3%A1ria%202%20Amigos." target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-bold text-[#0A1811] shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20ba5a]">
+                <i data-lucide="message-circle" class="h-4 w-4"></i> Agendar Consulta
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="reveal rounded-3xl border border-forest-900/10 bg-forest-900 p-7" style="transition-delay:.18s">
+          <div class="flex items-start gap-4">
+            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-terracotta-400"><i data-lucide="clock" class="h-5 w-5"></i></span>
+            <div class="flex-1">
+              <h3 class="text-base font-bold text-white">Horário de atendimento</h3>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-center justify-between border-b border-white/10 pb-2 text-sm"><span class="text-[#F3EFE6]/70">Segunda a sexta</span><span class="font-bold text-[#F3EFE6]">09h às 21h</span></li>
+                <li class="flex items-center justify-between border-b border-white/10 pb-2 text-sm"><span class="text-[#F3EFE6]/70">Sábado</span><span class="font-bold text-[#F3EFE6]">09h às 18h</span></li>
+                <li class="flex items-center justify-between text-sm"><span class="text-[#F3EFE6]/70">Domingo</span><span class="font-bold text-[#F3EFE6]">Fechado</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal h-full" style="transition-delay:.1s">
+        <div class="h-full min-h-[24rem] overflow-hidden rounded-3xl border border-forest-900/10 shadow-lg shadow-forest-900/10">
+          <iframe title="Mapa da Clínica Veterinária 2 Amigos - Rua Cica, 989, Vila Garcia, Jundiaí" src="https://maps.google.com/maps?q=Rua%20Cica%2C%20989%20-%20Vila%20Garcia%2C%20Jundia%C3%AD%20-%20SP%2C%2013206-475&t=&z=16&ie=UTF8&iwloc=&output=embed" class="h-full min-h-[24rem] w-full" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-forest-950 pt-16 text-[#F3EFE6]">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 pb-12 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <div class="flex items-center gap-3">
+        <svg viewBox="0 0 64 64" class="h-10 w-10" aria-hidden="true">
+          <rect width="64" height="64" rx="16" fill="#1B3B2B"/>
+          <g fill="#F3EFE6">
+            <ellipse cx="20" cy="22" rx="5.5" ry="7.5" transform="rotate(-18 20 22)"/>
+            <ellipse cx="44" cy="22" rx="5.5" ry="7.5" transform="rotate(18 44 22)"/>
+            <ellipse cx="11.5" cy="34" rx="4.8" ry="6.5" transform="rotate(-32 11.5 34)"/>
+            <ellipse cx="52.5" cy="34" rx="4.8" ry="6.5" transform="rotate(32 52.5 34)"/>
+            <path d="M32 36c7 0 13 5.4 13 11.4 0 3.8-3 6.6-6.8 6.6-2.3 0-4.3-1.2-6.2-1.2s-3.9 1.2-6.2 1.2C22 54 19 51.2 19 47.4 19 41.4 25 36 32 36z"/>
+          </g>
+          <circle cx="32" cy="45" r="3.5" fill="#D96B43"/>
+        </svg>
+        <span class="leading-none">
+          <span class="font-serif-display block text-lg font-bold text-white">2 Amigos</span>
+          <span class="block text-[10px] font-semibold uppercase tracking-[0.22em] text-terracotta-400">Clínica Veterinária</span>
+        </span>
+      </div>
+      <p class="mt-4 max-w-xs text-sm leading-relaxed text-[#F3EFE6]/60">Cuidado humanizado para cães e gatos de Jundiaí, Várzea Paulista e região.</p>
+      <div class="mt-5 flex gap-3">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Clínica 2 Amigos" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-[#F3EFE6]/70 transition-all duration-300 hover:border-terracotta-400 hover:text-terracotta-400"><i data-lucide="instagram" class="h-5 w-5"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Clínica 2 Amigos" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-[#F3EFE6]/70 transition-all duration-300 hover:border-terracotta-400 hover:text-terracotta-400"><i data-lucide="facebook" class="h-5 w-5"></i></a>
+        <a href="https://wa.me/5511998959494" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Clínica 2 Amigos" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-[#F3EFE6]/70 transition-all duration-300 hover:border-[#25D366] hover:text-[#25D366]"><i data-lucide="message-circle" class="h-5 w-5"></i></a>
+      </div>
+    </div>
+    <div>
+      <h3 class="text-sm font-bold uppercase tracking-[0.18em] text-terracotta-400">Links rápidos</h3>
+      <ul class="mt-4 space-y-2.5">
+        <li><a href="#sobre" class="text-sm text-[#F3EFE6]/70 transition-colors hover:text-white">Sobre Nós</a></li>
+        <li><a href="#servicos" class="text-sm text-[#F3EFE6]/70 transition-colors hover:text-white">Serviços</a></li>
+        <li><a href="#diferenciais" class="text-sm text-[#F3EFE6]/70 transition-colors hover:text-white">Diferenciais</a></li>
+        <li><a href="#localizacao" class="text-sm text-[#F3EFE6]/70 transition-colors hover:text-white">Localização</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-sm font-bold uppercase tracking-[0.18em] text-terracotta-400">Contato</h3>
+      <ul class="mt-4 space-y-3 text-sm text-[#F3EFE6]/70">
+        <li class="flex items-start gap-2.5"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-terracotta-400"></i> Rua Cica, 989 - Vila Garcia, Jundiaí - SP</li>
+        <li class="flex items-center gap-2.5"><i data-lucide="phone" class="h-4 w-4 shrink-0 text-terracotta-400"></i> <a href="tel:+5511998959494" class="transition-colors hover:text-white">(11) 99895-9494</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-sm font-bold uppercase tracking-[0.18em] text-terracotta-400">Horários</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li class="flex justify-between gap-4"><span class="text-[#F3EFE6]/60">Segunda a sexta</span><span class="font-semibold text-[#F3EFE6]">09h às 21h</span></li>
+        <li class="flex justify-between gap-4"><span class="text-[#F3EFE6]/60">Sábado</span><span class="font-semibold text-[#F3EFE6]">09h às 18h</span></li>
+        <li class="flex justify-between gap-4"><span class="text-[#F3EFE6]/60">Domingo</span><span class="font-semibold text-[#F3EFE6]">Fechado</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6">
+    <p class="mx-auto max-w-6xl px-4 text-center text-xs text-[#F3EFE6]/45 sm:px-6">© 2026 Clínica Veterinária 2 Amigos. Todos os direitos reservados. Feito com carinho para os pets de Jundiaí e Várzea Paulista.</p>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLUTUANTE ============ -->
+<a href="https://wa.me/5511998959494?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Veterin%C3%A1ria%202%20Amigos." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp da Clínica 2 Amigos" class="group fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/30 transition-transform duration-300 hover:scale-110 active:scale-95">
+  <span class="absolute inset-0 animate-ping rounded-full bg-[#25D366]/40 [animation-duration:2.2s]"></span>
+  <i data-lucide="message-circle" class="relative h-6 w-6"></i>
+</a>
+
+<script>
+// Ícones Lucide
+lucide.createIcons();
+
+// Menu mobile
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('.menu-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+// Marquee editorial
+const itens = ['Atendimento Humanizado','Consultas com Carinho','Cirurgias Seguras','Vacinação em Dia','Ambiente Acolhedor','Plantão de Urgência'];
+const track = document.getElementById('marquee-track');
+const paw = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#E2835E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></svg>';
+let html = '';
+for (let half = 0; half < 2; half++) {
+  html += '<div class="flex items-center gap-8">';
+  [...itens, ...itens].forEach(t => {
+    html += `<span class="font-serif-display flex items-center gap-8 whitespace-nowrap text-base italic tracking-wide text-[#F3EFE6]/90 sm:text-lg">${t}${paw}</span>`;
+  });
+  html += '</div>';
+}
+track.innerHTML = html;
+
+// Cards de serviços
+const wa = 'https://wa.me/5511998959494?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Veterin%C3%A1ria%202%20Amigos.';
+const waUrg = 'https://wa.me/5511998959494?text=Ol%C3%A1!%20Preciso%20de%20atendimento%20de%20urg%C3%AAncia%20para%20meu%20pet.';
+const servicos = [
+  { icon:'stethoscope', titulo:'Consultas', texto:'Avaliação clínica completa, preventiva e especializada, com escuta atenta ao tutor e tempo de sobra para o seu pet.', destaque:false },
+  { icon:'syringe', titulo:'Vacinas', texto:'Protocolos de imunização atualizados para cães e gatos, com carteirinha e lembretes para nunca perder uma dose.', destaque:false },
+  { icon:'microscope', titulo:'Exames', texto:'Exames laboratoriais e de imagem para um diagnóstico rápido e preciso, sem espera desnecessária.', destaque:false },
+  { icon:'heart-pulse', titulo:'Cirurgias', texto:'Procedimentos com anestesia segura, monitoramento completo e acompanhamento pós-operatório próximo.', destaque:false },
+  { icon:'siren', titulo:'Urgência', texto:'Atendimento de urgência e emergência no horário de funcionamento. Chegou, cuidamos — com prioridade e calma.', destaque:true },
+];
+const grid = document.getElementById('services-grid');
+grid.innerHTML = servicos.map((s, i) => `
+  <div class="reveal ${i < 3 ? 'lg:col-span-2' : 'lg:col-span-3'}" style="transition-delay:${0.08 * i}s">
+    <article class="group flex h-full flex-col rounded-3xl border p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${s.destaque ? 'border-terracotta-500/30 bg-forest-900 text-[#F3EFE6] shadow-lg shadow-forest-900/20' : 'border-forest-900/10 bg-white hover:border-forest-800/25 hover:shadow-forest-900/10'}">
+      <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-110 ${s.destaque ? 'bg-terracotta-500 text-white' : 'bg-terracotta-500/10 text-terracotta-500'}"><i data-lucide="${s.icon}" class="h-6 w-6"></i></span>
+      <h3 class="mt-5 text-xl font-bold ${s.destaque ? 'text-white' : 'text-forest-950'}">${s.titulo}</h3>
+      <p class="mt-2 flex-1 text-sm leading-relaxed ${s.destaque ? 'text-[#F3EFE6]/75' : 'text-muted'}">${s.texto}</p>
+      <a href="${s.destaque ? waUrg : wa}" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-1.5 text-sm font-bold transition-colors ${s.destaque ? 'text-terracotta-400 hover:text-terracotta-300' : 'text-forest-800 hover:text-terracotta-500'}">
+        Agendar pelo WhatsApp <i data-lucide="arrow-up-right" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+      </a>
+    </article>
+  </div>
+`).join('');
+lucide.createIcons();
+
+// Reveal on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Calculadora de plano de cuidado
+let tipoPet = 'cao';
+const btnCao = document.getElementById('btn-cao');
+const btnGato = document.getElementById('btn-gato');
+const ativo = ['border-terracotta-400','bg-terracotta-500','text-white'];
+const inativo = ['border-white/15','bg-white/5','text-[#F3EFE6]/70'];
+function setTipo(t) {
+  tipoPet = t;
+  [btnCao, btnGato].forEach(b => { b.classList.remove(...ativo, ...inativo); });
+  (t === 'cao' ? btnCao : btnGato).classList.add(...ativo);
+  (t === 'cao' ? btnGato : btnCao).classList.add(...inativo);
+  document.getElementById('calc-result').classList.add('hidden');
+}
+btnCao.addEventListener('click', () => setTipo('cao'));
+btnGato.addEventListener('click', () => setTipo('gato'));
+
+document.getElementById('calc-btn').addEventListener('click', () => {
+  const anos = parseFloat(document.getElementById('calc-idade').value);
+  if (isNaN(anos) || anos < 0 || anos > 30) return;
+  const senior = tipoPet === 'gato' ? anos >= 10 : anos >= 7;
+  let fase, checkup, vacinas;
+  if (anos < 1) {
+    fase = 'Filhote';
+    checkup = 'Visitas mensais até completar o protocolo de vacinas';
+    vacinas = 'Vacinas iniciais (V8/V10 ou V3/V4/V5) e vermifugação em dia';
+  } else if (senior) {
+    fase = 'Sênior';
+    checkup = 'Check-up semestral com exames de rotina';
+    vacinas = 'Reforços anuais e atenção redobrada a rins, coração e articulações';
+  } else {
+    fase = 'Adulto';
+    checkup = 'Check-up anual com exames preventivos';
+    vacinas = 'Reforço anual de vacinas e vermifugação a cada 6 meses';
+  }
+  document.getElementById('calc-fase').textContent = 'Fase: ' + fase;
+  document.getElementById('calc-lista').innerHTML = `<li>• ${checkup}</li><li>• ${vacinas}</li>`;
+  document.getElementById('calc-result').classList.remove('hidden');
+});
+</script>
+</body>
+</html>
